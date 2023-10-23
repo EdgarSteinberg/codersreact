@@ -1,6 +1,48 @@
+ul {
+    list-style: none;
+}
+a{
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    transition: 1s;
+    font-weight: bold;
+}
+
+a:hover{
+transform: scale(1.1);
+}
+
+.nav{
+    background-color: blueviolet;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.521);
+}
+
 h1 {
-    font-size: 30px;
-    background-color: #7CFEF0;
-    padding: 12px;
+    font-size: 25px;
+    background-color: rgba(255, 0, 221, 0.774);
     margin-bottom: 0;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.auto {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: azure;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px;
+ 
+}
+
+.img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
 }

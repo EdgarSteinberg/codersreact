@@ -1,8 +1,14 @@
 .saludo {
-    background-color: aqua;
+    background-color: rgb(255, 0, 191);
+    text-align: center;
+    font-size: 25px;
+    color: white;
 }
 
-h2.saludo{
-    font-size: 35px;
-    background-color: aqua;
-}
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+  }
+ 
+

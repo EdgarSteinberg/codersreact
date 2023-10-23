@@ -1,0 +1,16 @@
+.colo{
+    background-color: white;
+    margin: 35px;
+    color: rgb(244, 244, 247);
+    background-color: blue;
+} 
+
+.back {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 12%;
+}
+.titulo {
+    padding: 15px;
+}

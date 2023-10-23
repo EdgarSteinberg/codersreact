@@ -3,10 +3,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-}
+} 
 
-#root {
+ #root {
   width: 100%;
   text-align: center;
+ 
 
 }
