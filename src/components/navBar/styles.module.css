@@ -4,8 +4,6 @@ ul {
 a{
     color: white;
     text-decoration: none;
-    border: 2px solid white;
-    border-radius: 5px;
     padding: 5px;
     transition: 1s;
     font-weight: bold;
@@ -18,6 +16,7 @@ transform: scale(1.1);
 .nav{
     background-color: blueviolet;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.521);
+
 }
 
 h1 {
@@ -30,15 +29,16 @@ h1 {
 }
 
 .auto {
-    margin: 10px;
     display: flex;
+    justify-content: space-evenly; 
     align-items: center;
     text-align: center;
     color: azure;
     text-decoration: none;
     border-radius: 5px;
     padding: 5px;
- 
+    width: 100%;
+    font-size: 20px;
 }
 
 .img {

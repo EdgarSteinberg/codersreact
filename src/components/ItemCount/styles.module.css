@@ -1,0 +1,17 @@
+.boton {
+    margin : 20px;
+}
+
+.contador {
+    font-size: 30px;
+    margin-bottom: 0;
+    
+}
+
+.flex {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  
+}

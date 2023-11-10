@@ -1,0 +1,19 @@
+
+.centrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 12%;
+}
+
+.botones{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.total{
+    background-color: dimgrey;
+    color: aliceblue;
+}
