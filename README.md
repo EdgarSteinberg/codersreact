@@ -14,7 +14,10 @@ Este proyecto es un e-commerce desarrollado con React, utilizando herramientas c
 
 ## Uso
 
-Describe cómo utilizar tu aplicación y proporciona ejemplos si es necesario.
+Para ejecutar la aplicación en modo de desarrollo, utiliza el siguiente comando:
+npm install
+npm run dev
+Esto iniciará el servidor de desarrollo local en el puerto 5173. Abre tu navegador y visita http://localhost:5173 para ver la aplicación en acción.
 
 ## Características
 
@@ -52,6 +55,6 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 ## Contacto
 
 - Desarrollador: Edgar Steinberg
-- Email: tu@email.com
+- Email: s.steinberg2019@gmail.com
 - LinkedIn: [Edgar Steinberg LinkedIn](https://www.linkedin.com/in/tu-linkedin/)
 

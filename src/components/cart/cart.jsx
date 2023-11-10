@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { CartContext } from "../context/cartContext"
+import { CartContext } from "../../context/cartContext"
 import { Link } from "react-router-dom"
 import CartItem from "../cartItem/cartItem"
 import Button from 'react-bootstrap/Button';
@@ -25,7 +25,7 @@ const Cart = () => {
             {cart.map(p => <CartItem key={p.id} {...p} />)}
             <h3 className={styles.total}>Total de la compra: ${totalPrice}</h3>
             <div className={styles.botones}>
-                <Button variant="success"><Link to="/Checkout">Checkout</Link></Button>{' '}
+                <Button variant="success"><Link to="/Checkout">Finalizar compra</Link></Button>{' '}
                 <Button onClick={() => clearCart()} variant="danger">Vaciar Carrito</Button>{' '}
             </div>
 

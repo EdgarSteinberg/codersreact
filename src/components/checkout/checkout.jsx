@@ -2,7 +2,7 @@ import { collection, addDoc } from "firebase/firestore";
 import { useContext, useState } from "react";
 import CheckoutForm from "../checkoutForm/checkoutForm";
 import { db } from '../../firebase/cliente'
-import { CartContext } from "../context/cartContext";
+import { CartContext } from "../../context/cartContext";
 import styles from './styles.module.css'
 import { Link } from "react-router-dom"
 import Button from 'react-bootstrap/Button';

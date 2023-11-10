@@ -2,7 +2,7 @@
 import { useContext } from 'react';
 import Badge from 'react-bootstrap/Badge';
 import { BsCart4 } from "react-icons/bs";
-import { CartContext } from '../context/cartContext';
+import { CartContext } from '../../context/cartContext';
 import styles from './styles.module.css'
 
 const CartWidget = () => {

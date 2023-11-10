@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styles from './styles.module.css'
 import Button from 'react-bootstrap/Button';
-import { CartContext } from "../context/cartContext"
+import { CartContext } from "../../context/cartContext"
 import { BsTrash } from "react-icons/bs";
 
 const CartItem = ({ image, title, price, id, quantity }) => {
