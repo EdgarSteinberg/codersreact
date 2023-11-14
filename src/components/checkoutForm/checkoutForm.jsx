@@ -1,24 +1,33 @@
-import { useState } from "react"
+import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import styles from './styles.module.css'
 
 const CheckoutForm = ({ onConfirm }) => {
-    const [name, setName] = useState('')
-    const [phone, setPhone] = useState('')
-    const [email, setEmail] = useState('')
-    const [form, setForm] = useState(true)
+    const [name, setName] = useState('');
+    const [phone, setPhone] = useState('');
+    const [email, setEmail] = useState('');
+    const [form, setForm] = useState(true);
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleConfirm = (event) => {
-        event.preventDefault()
+        event.preventDefault();
 
-        const UserData = {
-            name, phone, email
+        if (!name || !phone || !email) {
+            setErrorMessage("Por favor, completa todos los campos.");
+            return;
         }
 
-        onConfirm(UserData)
-        setForm(false)
-    }
+        const UserData = {
+            name,
+            phone,
+            email
+        };
+
+        onConfirm(UserData);
+        setForm(false);
+        setErrorMessage(''); 
+    };
 
     return (
         <>
@@ -52,7 +61,6 @@ const CheckoutForm = ({ onConfirm }) => {
                                 placeholder="Enter your email"
                                 value={email}
                                 onChange={({ target }) => setEmail(target.value)}
-
                             />
                             <Form.Text className="text-muted">
                                 We'll never share your email with anyone else.
@@ -62,11 +70,17 @@ const CheckoutForm = ({ onConfirm }) => {
                         <Button variant="success" type="submit">
                             Crear Orden
                         </Button>
+
+                        {errorMessage && (
+                            <p className={styles.text}>{errorMessage}</p>
+                        )}
                     </Form>
                 </div>
             )}
         </>
-    )
-}
+    );
+};
 
-export default CheckoutForm
+export default CheckoutForm;
+
+

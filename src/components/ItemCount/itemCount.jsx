@@ -6,15 +6,15 @@ const Counter = ({ stock, initial, onAdd }) => {
 
   const [counter, setCounter] = useState(initial)
 
-  const suma = () => {
+  const addition = () => {
     counter < stock && setCounter(counter + 1)
   }
 
-  const resta = () => {
+  const subtraction = () => {
     counter > 1 && setCounter(counter - 1)
   }
   
-  const agregarAlCarrito = () => {
+  const addToCart = () => {
     if (counter > 0 && counter <= stock) {
       onAdd(counter);
     }
@@ -23,11 +23,11 @@ const Counter = ({ stock, initial, onAdd }) => {
   return (
     <>
      <div className={styles.flex}>
-      <Button className={styles.boton} onClick={resta} variant="outline-primary"> - </Button>{' '}
+      <Button className={styles.boton} onClick={subtraction} variant="outline-primary"> - </Button>{' '}
       <p className={styles.contador}>{counter}</p>
-     <Button className={styles.boton} onClick={suma} variant="outline-primary"> + </Button>{' '}
+     <Button className={styles.boton} onClick={addition} variant="outline-primary"> + </Button>{' '}
      </div>
-      <Button onClick={agregarAlCarrito} variant="primary"> Agregar al carrito </Button>{' '} 
+      <Button onClick={addToCart} variant="primary"> Agregar al carrito </Button>{' '} 
     </>
   )
 }
