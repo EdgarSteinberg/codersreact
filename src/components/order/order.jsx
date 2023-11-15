@@ -1,13 +1,13 @@
 import { collection, addDoc } from "firebase/firestore";
 import { useContext, useState } from "react";
-import CheckoutForm from "../checkoutForm/checkoutForm";
 import { db } from '../../firebase/cliente'
 import { CartContext } from "../../context/cartContext";
 import styles from './styles.module.css'
 import { Link } from "react-router-dom"
 import Button from 'react-bootstrap/Button';
+import OrderItem from "../orderItem/orderItem";
 
-const Checkout = () => {
+const Order = () => {
     const [loading, setLoading] = useState(true);
     const [orderId, setOrderId] = useState('');
     const { cart, clearCart } = useContext(CartContext);
@@ -43,7 +43,7 @@ const Checkout = () => {
 
     return (
         <>
-            <CheckoutForm onConfirm={createOrder} />
+            <OrderItem onConfirm={createOrder} />
             {loading && <h2>Se está generando su orden...</h2>}
             {!loading && orderId && <div className={styles.margen}>
                 <p>Su Compra fue efectuada correctamente.</p>
@@ -57,4 +57,4 @@ const Checkout = () => {
     );
 };
 
-export default Checkout;
+export default Order;

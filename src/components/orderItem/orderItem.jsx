@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import styles from './styles.module.css'
 
-const CheckoutForm = ({ onConfirm }) => {
+const OrderItem = ({ onConfirm }) => {
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
@@ -81,6 +81,6 @@ const CheckoutForm = ({ onConfirm }) => {
     );
 };
 
-export default CheckoutForm;
+export default OrderItem;
 
 

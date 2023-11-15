@@ -28,6 +28,7 @@ const ItemDetail = ({ title, price, image, id, description, categoryId, stock })
                     <p>Descripcion {description}</p>
                     <p>Categoria {categoryId}</p>
                     <p className={styles.precio}>Precio ${price}</p>
+                    <p>stock {stock}</p>
                     <div className={styles.numero}>
                         {
                             quantityAdded > 0 ? (

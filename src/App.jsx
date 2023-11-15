@@ -7,7 +7,7 @@ import NotFound from './components/notFound/notFound';
 import ItemDetailContainer from './components/itemDetailContainer/itemDetailContainer'
 import CartComponentContext from '../src/context/cartContext';
 import Cart from './components/Cart/cart';
-import Checkout from './components/checkout/checkout';
+import Order from './components/order/order';
 
 function App() {
 
@@ -20,7 +20,7 @@ function App() {
           <Route path="/category/:id" element={<ItemListContainer />} />
           <Route path="/item/:id" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/order" element={<Order />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
