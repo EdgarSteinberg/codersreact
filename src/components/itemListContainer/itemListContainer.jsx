@@ -3,7 +3,7 @@ import styles from './styles.module.css';
 import Spinner from 'react-bootstrap/Spinner';
 import Button from 'react-bootstrap/Button';
 import { useParams } from 'react-router-dom';
-import Item from '../itemList/itemList';
+import ItemList from '../itemList/itemList'
 import { db } from '../../firebase/cliente';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 
@@ -39,9 +39,7 @@ const ItemListContainer = ({ greeting }) => {
     return (
         <>
             <h2 className={styles.saludo}>{greeting}</h2>
-            <div className={styles.cardContainer}>
-                {products.map(prod => <Item key={prod.id} producto={prod} />)}
-            </div>
+            <ItemList products={products}/>
         </>
     )
 }
