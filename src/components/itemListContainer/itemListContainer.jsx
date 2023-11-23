@@ -12,6 +12,7 @@ const ItemListContainer = ({ greeting }) => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
     const { id } = useParams()
+    const [titulo, setTitulo] = useState('')
 
     useEffect(() => {
         const productsRef = id ? query(collection(db, "products"), where("categoryId", "==", id)) : collection(db, "products")
@@ -19,6 +20,7 @@ const ItemListContainer = ({ greeting }) => {
         getDocs(productsRef)
             .then(snapshot => {
                 setProducts(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })))
+                id ?  setTitulo(`${id}`) : setTitulo('Productos')
             })
             .catch(e => console.log(e))
             .finally(() => setLoading(false))
@@ -39,7 +41,7 @@ const ItemListContainer = ({ greeting }) => {
     return (
         <>
             <h2 className={styles.saludo}>{greeting}</h2>
-            <ItemList products={products}/>
+            <ItemList products={products} titulo={titulo}/>
         </>
     )
 }
