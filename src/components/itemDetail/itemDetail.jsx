@@ -33,9 +33,7 @@ const ItemDetail = ({ title, price, image, id, description, categoryId, stock })
                         {
                             quantityAdded > 0 ? (
                                 <div>
-                                    <Button variant="success">
-                                        <Link to={'/cart'}>Terminar Compra</Link>
-                                    </Button>
+                                      <Link to={"/cart"}> <Button variant="success">Terminar Compra</Button>{' '}</Link>
                                 </div>
                             ) : (
                                 <Counter initial={1} stock={stock} onAdd={handleOnAdd} />

@@ -8,7 +8,7 @@ import Button from 'react-bootstrap/Button';
 import OrderItem from "../orderItem/orderItem";
 
 const Order = () => {
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const [orderId, setOrderId] = useState('');
     const { cart, clearCart } = useContext(CartContext);
 
@@ -44,14 +44,12 @@ const Order = () => {
     return (
         <>
             <OrderItem onConfirm={createOrder} />
-            {loading && <h2>Se está generando su orden...</h2>}
+            {loading && <h2>se esta generando su orden</h2>}
             {!loading && orderId && <div className={styles.margen}>
                 <p>Su Compra fue efectuada correctamente.</p>
                 <p>Conserve este numero de seguimiento:</p>
                 <h2 className={styles.verde}>{orderId}</h2>
-                <Button variant="warning">
-                    <Link to={'/'}>Realizar una nueva compra</Link>
-                </Button>
+                <Link to={"/"}> <Button variant="warning" className={styles.color} >Realizar una nueva compra</Button>{' '}</Link>
             </div>}
         </>
     );

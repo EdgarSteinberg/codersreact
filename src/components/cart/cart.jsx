@@ -16,7 +16,8 @@ const Cart = () => {
         return (
             <div className={styles.centrar}>
                 <h2>No hay items en el carrito</h2>
-                <Button variant="primary"><Link to="/">Productos</Link></Button>
+                <Link to={"/"}> <Button variant="primary">Productos</Button>{' '}</Link>
+               {/*  <Button variant="primary"><Link to="/">Productos</Link></Button> */}
             </div>
         )
     }
