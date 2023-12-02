@@ -1,6 +1,7 @@
 
 .card {
-  display: flex;
+ /*  display: flex; */
+ /*  flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
   width: 20%;
@@ -33,7 +34,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  flex: none;
+  /* flex: none; */
 }
 
 .title {
@@ -60,4 +61,25 @@
 
 .button {
   width: 40%;
+}
+
+@media screen and (max-width: 1000px) {
+  .card {
+    width: 30%; /* Cambia el ancho de la tarjeta para pantallas más pequeñas */
+    margin: 5px; /* Ajusta el margen si es necesario */
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .card {
+    width: 40%; /* Cambia el ancho de la tarjeta para pantallas más pequeñas */
+    margin: 5px; /* Ajusta el margen si es necesario */
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .card {
+    width: 70%; /* Cambia el ancho de la tarjeta para pantallas más pequeñas */
+    margin: 5px; /* Ajusta el margen si es necesario */
+  }
 }

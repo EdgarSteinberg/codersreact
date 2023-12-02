@@ -12,7 +12,7 @@ const NavBar = () => {
         <>
             <Navbar className={styles.nav} variant="dark">
                     <Nav className={styles.auto}>
-                    <NavLink to={'/'}> <img src={logo} alt="Logo" className={styles.img} /></NavLink>
+                    <NavLink to={'/'}> <img src={logo} alt="Logo" className={`${styles.img} logo`} /></NavLink>
                     <NavLink className={styles.auto} to={'/'}>Inicio</NavLink>
                         {arrayCategorias.map((cat, index) => <NavLink
                             key={index}

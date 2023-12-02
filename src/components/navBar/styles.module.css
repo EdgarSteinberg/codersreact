@@ -1,4 +1,4 @@
-ul {
+/* ul {
     list-style: none;
 }
 a{
@@ -12,7 +12,7 @@ a{
 a:hover{
 transform: scale(1.1);
 }
-
+ */
 .nav{
     background-color: blueviolet;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.521);
@@ -29,6 +29,7 @@ h1 {
 }
 
 .auto {
+    font-size: 20px;
     display: flex;
     justify-content: space-evenly; 
     align-items: center;
@@ -36,13 +37,33 @@ h1 {
     color: azure;
     text-decoration: none;
     border-radius: 5px;
-    padding: 5px;
     width: 100%;
-    font-size: 20px;
 }
 
 .img {
     width: 40px;
     height: 40px;
     object-fit: cover;
+    display: block;
+    
 }
+
+@media screen and (max-width:700px){
+    .auto {
+        font-size: 1rem;
+    }
+    .navbar-expand .navbar-nav {
+         flex-direction: column; 
+    }
+    
+}
+
+  /* Ajusta el tamaño del logo para pantallas más pequeñas si lo necesitas */
+  @media screen and (max-width: 400px) {
+    .img{
+      display: none; /* Por ejemplo, ajusta el ancho del logo para pantallas más pequeñas */
+    }
+    .auto {
+        font-size: 12px;
+    }
+  }

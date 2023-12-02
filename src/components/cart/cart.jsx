@@ -25,7 +25,8 @@ const Cart = () => {
             {cart.map(p => <CartItem key={p.id} {...p} />)}
             <h3 className={styles.total}>Total de la compra: ${totalPrice}</h3>
             <div className={styles.botones}>
-                <Button variant="success"><Link to="/Order">Finalizar compra</Link></Button>{' '}
+                {/* <Button variant="success"><Link to="/Order">Finalizar compra</Link></Button>{' '} */}
+                <Link to={"/Order"}> <Button variant="success">Finalizar compra</Button>{' '}</Link>
                 <Button onClick={() => clearCart()} variant="danger">Vaciar Carrito</Button>{' '}
             </div>
 
